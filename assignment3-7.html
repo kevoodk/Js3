@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<input type="number" id="numerator1">
+<br />
+<input type="number" id="denominator1">
+<br />
+
+
+<br />
+<input type="number" id="numerator2">
+<br />
+<input type="number" id="denominator2">
+
+<button id="aa" onclick="mul()">*</button>
+<button id="div" onclick="div()">/</button>
+<button id="plus" onclick="plus()">+</button>
+<button id="minus">-</button>
+
+<div id="here"></div>
+<script>
+function mul() {
+  var a = document.getElementById("numerator1").value;
+  var b = document.getElementById("denominator1").value;
+  var c = document.getElementById("numerator2").value;
+  var d = document.getElementById("denominator2").value;
+  var x = b * d;
+  var y = a * c;
+  var z = y + "/" + x;
+  document.getElementById('here').innerHTML = z;
+}
+function plus() {
+  let a = parseInt(document.getElementById("numerator1").value);
+  let b = parseInt(document.getElementById("denominator1").value);
+  let c = parseInt(document.getElementById("numerator2").value);
+  let d = parseInt(document.getElementById("denominator2").value);
+  var y = b * d;
+  var z = b * c;
+  var n = d * a;
+  var e = a + c;
+  var x;
+  if(b == d){
+    x = e + "/" + b;
+
+  } else {
+       x = n + z + "/" + y;
+  }
+  document.getElementById('here').innerHTML = x;
+
+
+}
+
+</script>
+</body>
+</html>

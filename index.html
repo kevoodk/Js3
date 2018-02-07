@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form id="myForm" action="fraction.html">
+    Numerator:
+    <br>
+    <input type="number" id="numerator" placeholder="Insert number...">
+    <br><br>
+    Denominator:
+    <br>
+    <input type="number" id="denominator" placeholder="Insert number...">
+    <br><br>
+</form>
+
+<br>
+
+<button onclick="getElementById('demo').innerHTML=reduce()">Reduce</button>
+
+<br>
+
+
+<button onclick="console.log(reduce())">Reduce by console</button>
+
+<p id=demo></p>
+
+<script>
+
+        // Reduce a fraction by finding the Greatest Common Divisor and dividing by it.
+        function reduce(){
+            var n = document.getElementById("myForm").elements[0].value
+            var d = document.getElementById("myForm").elements[1].value
+            var gcd = function gcd(a,b){
+                return b ? gcd(b, a%b) : a;
+            };
+            gcd = gcd(n,d);
+            return [n/gcd + "/" + d/gcd];
+
+        }
+
+
+
+</script>
+
+
+</body>
+</html>
